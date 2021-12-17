@@ -1,0 +1,104 @@
+legend.scheduler-border {
+  width: inherit;
+  /* Or auto */
+  padding: 0 10px;
+  /* To give a bit of padding on the left and right */
+  border-bottom: none;
+}
+
+body {
+  min-height: 90%;
+}
+
+.border {
+  border-width: 0px !important;
+  /* border-color: black; */
+}
+
+.purple {
+  background-color: #4047c9 !important;
+}
+
+.navbar-brand {
+  font-size: 30px;
+  padding-right: 20px;
+  color: white;
+}
+
+#addFriend {
+  cursor: pointer;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.class_delete_row {
+  color: red;
+  text-shadow: 1px 1px 1px #ccc;
+  font-size: 1.5em;
+  margin: 5%;
+}
+
+.class_edit_row {
+  color: purple;
+  text-shadow: 1px 1px 1px #ccc;
+  font-size: 1.5em;
+  margin: 5%;
+}
+
+.class_save_row {
+  color: green;
+  text-shadow: 1px 1px 1px #ccc;
+  font-size: 1.5em;
+  margin: 5%;
+}
+
+.hide_save_button,
+hideBtn {
+  display: none;
+}
+
+.hideBtn {
+  display: none;
+}
+
+.input-validation-error {
+  border: 1px solid #ff0000;
+  background-color: #ffeeee;
+}

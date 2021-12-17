@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+
+<head>
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+        integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style/normalize.css">
+    <link rel="stylesheet" href="style/mystyle.css">
+
+</head>
+
+
+<body>
+
+
+    <div class="container-fluid">
+        <header class="text-center text-light">
+            <div class="container-fluid mt-3 bg-dark">
+                <h1 style="padding:30px;"> A simple Expense Manager v-1.0.0 </h1>
+            </div>
+        </header>
+        <!-- A model to add friend -->
+        <div id="addFriendModel" class="modal" aria-required="true">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <form class="needs-validation" novalidate id="friendNameForm">
+                    <div class="row">
+                        <div class="form-group col-md-12">
+                            <label for="enterFriendName" class="control-label">Enter name of your friend</label>
+                            <input type="text" title="Expense" class="form-control" id="enterFriendName" required="">
+                            <div class="invalid-feedback"></div>
+                        </div>
+    
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4"><button type="submit" class="btn btn-primary" id="submitFriendName">Add Friend</button></div>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+        <!-- model end -->
+
+        <div>
+
+        </div>
+    </div>
+    </div>
+    <br>
+    <div class="border border-top-0 border-dark w3-bottombar ">
+        <div class="container col-md-6">
+            <div class="border p-4 border-dark form-group">
+                <legend class="w-auto scheduler-border"> Simple Expense Manager </legend>
+                <form action="#" class="needs-validation" novalidate id="insertIntoTableForm">
+                    <div class="form-group row text-center" id="testid">
+                        <div class="col-md-12 float-right"> <label for="Add Friend" class="control-label ">Add
+                                Friend:</label>
+                            <span id="addFriend" class="btn btn-large btn-primary "><i
+                                    class="fa-solid fa-circle-plus display-4 text-center"></i></span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-6">
+                            <label for="payMode" class="control-label">Payment Mode</label>
+                            <select type="text" title="Payment Mode" class="form-control" id="payMode">
+                                <option value="Online">Online</option>
+                                <option value="Cash">Cash</option>
+                                <option value="UPI">UPI</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group col-md-6">
+                            <label for="friendList" class="control-label">Friend List</label>
+                            <select multiple="" type="text" title="Friends" class="form-control" id="friendList">
+                                <option selected value="Personal">Personal</option>
+
+                            </select>
+                        </div>
+
+                    </div>
+
+
+                    <div class="row">
+                        <div class="form-group col-md-6">
+                            <label for="Expense" class="control-label">Expense on (Name)</label>
+                            <input type="text" title="Expense" class="form-control" id="expOn"  required>
+                        </div>
+
+
+                        <div class="form-group col-md-6">
+                            <label for="Amount" class="control-label">Amount</label>
+                            <input type="number" title="Amount" class="form-control" id="amount_expense">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="form-group col-md-6">
+                            <label for="Currency" class="control-label">Currency</label>
+                            <select type="list" title="Currency" class="form-control" id="currency">
+                                <option class="USD">USD</option>
+                                <option class="INR">INR</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="Date" class="control-label">Date</label>
+                            <input type="date" class="form-control" id="expDate">
+                        </div>
+                    </div>
+
+<div style="float: right;" class="col-md-12">
+   
+    <div class="row"><button type="submit" class="btn btn-primary " id="form_submit">Add Expense</button>
+        <button type="submit" class="btn btn-success hideBtn " id="for_save_edit">Save Expense</button></div>
+        <button type="submit" class="btn btn-danger hideBtn " id="for_cancel_edit" onclick="cancel_edit();">Cancel</button></div></div>
+</div>                    
+
+                </form>
+
+
+                    <table class="table table-hover table-bordered " cellspacing="3" cellpadding="5" id="report_table">
+                        <tr class="tableHead ">
+                            <thead class=" bg-dark text-center">
+
+                                <tr class="tableHead col-md-6">
+                                    <th> <select type="list" title="Currency" id="currencyFilter">
+                                        <option class="none"></option>
+                                        <option class="USD">USD</option>
+                                        <option class="INR">INR</option>
+                                        </select></th>
+                                    <th><select type="list" title="Friend" id="filter_friend">
+                                            <option>Personal</option>
+                                        </select></th>
+                                </tr>
+                            </thead>
+                        </tr>
+                        <tr class="bg-success text-center">
+                                <th>TID</th>
+                                <th>Expense Type</th>
+                                <th>Friend</th>
+                                <th>Expense On</th>
+                                <th>Date</th>
+                                <th>Currency</th>
+                                <th>Amount</th>
+                                <th>Action</th>
+                            
+                           
+                        </tr>
+                    </table>
+                </div>
+            </fieldset>
+
+
+        </div>
+
+
+        <footer class="text-center text-lg-start bg-light text-muted">
+
+
+            <!-- Copyright -->
+            <div class="text-center p-4 bg-dark text-center text-light">
+                © 2021 Copyright: Java RnD
+                <a class="text-reset fw-bold "></a>
+            </div>
+            <!-- Copyright -->
+        </footer>
+        <!-- Footer -->
+    </div>
+    </div>
+
+
+    <script src="script/app.js"></script>
+
+
+
+</body>
+
+</html>
